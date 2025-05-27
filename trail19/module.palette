@@ -1,0 +1,12 @@
+<!--
+  Copyright 2025 mithun. All Rights Reserved.
+ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<bajaObjectGraph version="1.0">
+  <p m="b=baja" t="b:UnrestrictedFolder">
+    <p n="Trail19Network" m="x=trail19" t="x:Trail19Network"/>
+    <p n="Trail19Device" t="x:Trail19Device"/>
+    <p n="Trail19DeviceFolder" t="x:Trail19DeviceFolder"/>
+    <p n="Trail19PointFolder" t="x:Trail19PointFolder"/>
+  </p>
+</bajaObjectGraph>
