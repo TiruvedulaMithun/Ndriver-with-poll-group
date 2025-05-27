@@ -9,6 +9,7 @@ import java.io.*;
 import javax.baja.ndriver.comm.*;
 import javax.baja.ndriver.datatypes.*;
 import javax.baja.ndriver.io.TypedInputStream;
+import javax.baja.util.ICoalesceable;
 
 /**
  * Trail19Message is super class for all trail19 messages
@@ -49,4 +50,30 @@ public class Trail19Message
 //    return "??";
 //  }
 
+  /**
+   * Get the key which may be used to index this coalesceable
+   * in hash maps.  This key must implement hashCode() and equals()
+   * according to the coalescing semanatics.
+   */
+    @Override
+    public Object getCoalesceKey()
+    {
+      // TODO if the message can coalesce, return a unique key to coalesce the message
+      return this;
+    }
+
+    /**
+     * Coalesce this instance with the specified object and return
+     * the result (typically this or c).  If using a CoalesceQueue,
+     * this object is always the first enqueued object and c is the
+     * new object being enqueued.
+     *
+     * @param c
+     */
+    @Override
+    public ICoalesceable coalesce(ICoalesceable c)
+    {
+      // TODO if the message can coalesce, determine the final coalesced message
+      return c;
+    }
 }

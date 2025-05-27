@@ -26,7 +26,7 @@ public class BTrail19TcpCommConfig
 //region /*+ ------------ BEGIN BAJA AUTO GENERATED CODE ------------ +*/
 //@formatter:off
 /*@ $com.mithun.trail19.comm.BTrail19TcpCommConfig(2979906276)1.0$ @*/
-/* Generated Tue May 27 14:40:22 EDT 2025 by Slot-o-Matic (c) Tridium, Inc. 2012-2025 */
+/* Generated Tue May 27 15:03:53 EDT 2025 by Slot-o-Matic (c) Tridium, Inc. 2012-2025 */
 
   //region Type
 

@@ -5,7 +5,9 @@
 package com.mithun.trail19.point;
 
 import javax.baja.driver.point.BReadWriteMode;
+import javax.baja.driver.util.BPollFrequency;
 import javax.baja.ndriver.point.BNProxyExt;
+import javax.baja.ndriver.poll.BINPollable;
 import javax.baja.nre.annotations.NiagaraProperty;
 import javax.baja.nre.annotations.NiagaraType;
 import javax.baja.status.BStatusBoolean;
@@ -38,7 +40,7 @@ public class BTrail19ProxyExt
 //region /*+ ------------ BEGIN BAJA AUTO GENERATED CODE ------------ +*/
 //@formatter:off
 /*@ $com.mithun.trail19.point.BTrail19ProxyExt(2979906276)1.0$ @*/
-/* Generated Tue May 27 14:40:23 EDT 2025 by Slot-o-Matic (c) Tridium, Inc. 2012-2025 */
+/* Generated Tue May 27 15:03:53 EDT 2025 by Slot-o-Matic (c) Tridium, Inc. 2012-2025 */
 
   //region Type
 
@@ -81,16 +83,36 @@ public class BTrail19ProxyExt
 ////////////////////////////////////////////////////////////////
 // ProxyExt
 ////////////////////////////////////////////////////////////////
+
+  /**
+   * Proxy extensions that belong to the same Poll Group should
+   * return the equivalent poll group code from this method.
+   * This allows the polling of those proxies to be coalesced
+   * into a single poll.
+   * <p>
+   * In other words, if two proxy extensions are polled by one poll group
+   * then the Objects returned by either of the proxy extension should
+   * equal each other when passed to each other's .equals methods.
+   */
+  @Override
+  public Object getPollGroupCode()
+  {
+    // TODO return the poll group code for this proxy extension
+    return null;
+  }
+
   public void readSubscribed(Context cx)
     throws Exception
   {
-    // TODO
+    // TODO do not change unless you want to modify the default behavior of registering to the poll group
+    super.readSubscribed(cx);
   }
 
   public void readUnsubscribed(Context cx)
     throws Exception
   {
-     // TODO
+    // TODO do not change unless you want to modify the default behavior of unregistering from the poll group
+    super.readUnsubscribed(cx);
   }
 
   public boolean write(Context cx)
@@ -109,11 +131,20 @@ public class BTrail19ProxyExt
   }
 
   /**
+   * Return the poll group type.
+   */
+  @Override
+  public Type getPollGroupType()
+  {
+    return BTrail19PollGroup.TYPE;
+  }
+
+  /**
    * Return the read/write mode of this proxy.
    */
   public BReadWriteMode getMode()
   {
-    // TODO
+    // TODO determine the read/write mode based on the point.
     return BReadWriteMode.readonly;
   }
 
