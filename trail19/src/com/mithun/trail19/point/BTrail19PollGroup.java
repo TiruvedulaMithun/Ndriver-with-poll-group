@@ -41,22 +41,15 @@ public class BTrail19PollGroup
 //endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
 
   /**
-   * This overriden function should call the getSubscribedProxyExts method
+   * This overridden function should call the getSubscribedProxyExts method
    * and update each registered + subscribed proxy extension with the new data.
+   * This method is called by the BPollScheduler when it is time to poll this group.
    */
+  @Override
   public void doPoll ()
   {
     BNProxyExt[] proxyExts = getSubscribedProxyExts();
     // TODO add code to poll the group of proxy extensions
-  }
-
-  /**
-   * Get the frequency at which this poll group should be polled.
-   */
-  @Override
-  public BPollFrequency getPollFrequency ()
-  {
-    // TODO customize the poll frequency if needed
-    return super.getPollFrequency();
+    // It is recommended to use the ((BTrail19Network) getNetwork()).postAsync(Runnable to perform the poll) to not block the engine thread
   }
 }

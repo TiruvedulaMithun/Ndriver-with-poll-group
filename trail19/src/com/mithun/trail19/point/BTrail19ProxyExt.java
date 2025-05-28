@@ -101,24 +101,12 @@ public class BTrail19ProxyExt
     return null;
   }
 
-  public void readSubscribed(Context cx)
-    throws Exception
-  {
-    // TODO do not change unless you want to modify the default behavior of registering to the poll group
-    super.readSubscribed(cx);
-  }
 
-  public void readUnsubscribed(Context cx)
-    throws Exception
-  {
-    // TODO do not change unless you want to modify the default behavior of unregistering from the poll group
-    super.readUnsubscribed(cx);
-  }
 
   public boolean write(Context cx)
     throws Exception
   {
-    // TODO
+    // TODO write the point value. If performing any IO, it is recommended to use the (BTrail19Network) getNetwork()).postAsync(Runnable to perform the write) to not block the engine thread
     return false;
   }
 
