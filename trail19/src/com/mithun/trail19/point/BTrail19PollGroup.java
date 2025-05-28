@@ -50,9 +50,13 @@ public class BTrail19PollGroup
     // TODO add code to poll the group of proxy extensions
   }
 
+  /**
+   * Get the frequency at which this poll group should be polled.
+   */
   @Override
   public BPollFrequency getPollFrequency ()
   {
-    return BPollFrequency.DEFAULT;
+    // TODO customize the poll frequency if needed
+    return super.getPollFrequency();
   }
 }
