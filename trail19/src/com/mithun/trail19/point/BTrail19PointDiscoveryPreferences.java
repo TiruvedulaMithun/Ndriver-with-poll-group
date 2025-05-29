@@ -9,7 +9,6 @@ import javax.baja.nre.annotations.NiagaraType;
 import javax.baja.sys.Sys;
 import javax.baja.sys.Type;
 
-
 /**
  * BTrail19PointDiscoveryPreferences controls the type of discovery leafs using during
  * point discovery for trail19
@@ -35,6 +34,7 @@ public class BTrail19PointDiscoveryPreferences
 
 //@formatter:on
 //endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
+
   public BTrail19PointDiscoveryPreferences()
   {
   }

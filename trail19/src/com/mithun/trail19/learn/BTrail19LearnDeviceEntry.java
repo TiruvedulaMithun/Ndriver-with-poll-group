@@ -62,6 +62,7 @@ public class BTrail19LearnDeviceEntry
 
 //@formatter:on
 //endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
+
   public BTrail19LearnDeviceEntry()
   {
   }

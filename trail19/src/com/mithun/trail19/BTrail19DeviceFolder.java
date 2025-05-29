@@ -8,7 +8,6 @@ import javax.baja.ndriver.BNDeviceFolder;
 import javax.baja.nre.annotations.NiagaraType;
 import javax.baja.sys.*;
 
-
 /**
  * BTrail19DeviceFolder is a folder for BTrail19Device.
  *
@@ -33,6 +32,7 @@ public class BTrail19DeviceFolder
 
 //@formatter:on
 //endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
+
 ////////////////////////////////////////////////////////////////
 // Access
 ////////////////////////////////////////////////////////////////

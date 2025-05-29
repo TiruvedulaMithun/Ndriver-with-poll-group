@@ -9,13 +9,12 @@ import javax.baja.nre.annotations.NiagaraType;
 import javax.baja.sys.Sys;
 import javax.baja.sys.Type;
 
-
 import com.mithun.trail19.*;
 
 /**
  * BTrail19PointFolder
  *
- * @author   mithun on 27 May 2025
+ * @author mithun on 27 May 2025
  */
 @NiagaraType
 public class BTrail19PointFolder
@@ -36,6 +35,7 @@ public class BTrail19PointFolder
 
 //@formatter:on
 //endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
+
 ////////////////////////////////////////////////////////////////
 // Access
 ////////////////////////////////////////////////////////////////

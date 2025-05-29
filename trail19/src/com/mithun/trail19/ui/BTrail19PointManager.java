@@ -16,7 +16,6 @@ import javax.baja.util.*;
 import javax.baja.workbench.mgr.*;
 import javax.baja.workbench.mgr.folder.*;
 
-
 import com.mithun.trail19.*;
 import com.mithun.trail19.point.*;
 
@@ -27,7 +26,10 @@ import com.mithun.trail19.point.*;
  * @author mithun on 27 May 2025
  */
 @NiagaraType(
-  agent = @AgentOn(types = { "trail19:Trail19PointDeviceExt", "trail19:Trail19PointFolder" })
+  agent = @AgentOn(types = {
+    "trail19:Trail19PointDeviceExt",
+    "trail19:Trail19PointFolder"
+  })
 )
 public class BTrail19PointManager
   extends BNPointManager
@@ -47,6 +49,7 @@ public class BTrail19PointManager
 
 //@formatter:on
 //endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
+
 ////////////////////////////////////////////////////////////////
 // Constructor
 ////////////////////////////////////////////////////////////////

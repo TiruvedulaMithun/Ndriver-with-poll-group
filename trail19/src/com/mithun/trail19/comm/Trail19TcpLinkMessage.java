@@ -51,9 +51,22 @@ public class Trail19TcpLinkMessage
 //  }
 
   /**
-   * Get the key which may be used to index this coalesceable
-   * in hash maps.  This key must implement hashCode() and equals()
-   * according to the coalescing semanatics.
+   * Returns the coalescing key used to group coalescable requests.
+   * <p>
+   * This key determines whether two queue elements are eligible to be combined.
+   * It must implement proper {@code hashCode()} and {@code equals()} semantics
+   * in line with the driver’s coalescing logic.
+   * <p>
+   * The default implementation returns {@code this}, which effectively disables
+   * coalescing by treating each request as unique.
+   * <p>
+   * To enable coalescing, override this method to return a meaningful grouping key
+   * (e.g., based on point address, priority, or operation type).
+   *
+   * @return the key used for identifying coalescable requests
+   *
+   * @see \#coalesce(ICoalesceable)
+   * @since Niagara 5.0
    */
   @Override
   public Object getCoalesceKey()
@@ -63,17 +76,28 @@ public class Trail19TcpLinkMessage
   }
 
   /**
-   * Coalesce this instance with the specified object and return
-   * the result (typically this or c).  If using a CoalesceQueue,
-   * this object is always the first enqueued object and c is the
-   * new object being enqueued.
+   * Attempts to coalesce this object with the newly enqueued {@code newElement}.
+   * <p>
+   * This method is called when two queue elements have matching coalescing keys
+   * (as returned by {@link \#getCoalesceKey()}) and are eligible to be merged.
+   * Typically, either {@code this} (the older object) or {@code newElement} (the newer object)
+   * is returned based on your desired overwrite or merge strategy.
+   * <p>
+   * The default implementation always returns {@code newElement}, meaning
+   * that newer requests override older ones without merging. To support
+   * smarter merging (e.g., aggregating changes or selecting based on priority),
+   * override this method accordingly.
    *
-   * @param c
+   * @param newElement the newly added queue element with the same coalescing key
+   * @return the result of the coalescing operation (typically {@code this} or {@code newElement})
+   *
+   * @see \#getCoalesceKey()
+   * @since Niagara 5.0
    */
   @Override
-  public ICoalesceable coalesce(ICoalesceable c)
+  public ICoalesceable coalesce(ICoalesceable newElement)
   {
     // TODO if the message can coalesce, determine the final coalesced message
-    return c;
+    return newElement;
   }
 }

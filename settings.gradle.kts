@@ -81,7 +81,7 @@ pluginManagement {
 
   val gradlePluginRepoUrl = "file:///${gradlePluginHome.replace('\\', '/')}"
 
-  val gradlePluginVersion: String = "8.5.20"
+  val gradlePluginVersion: String = "8.5.23-SNAPSHOT"
   val settingsPluginVersion: String = "8.5.1"
 
   repositories {

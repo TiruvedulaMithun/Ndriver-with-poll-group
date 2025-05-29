@@ -40,6 +40,7 @@ vendor {
 
 subprojects {
   repositories {
+    mavenLocal()
     mavenCentral()
   }
   pluginManager.withPlugin("java-base") {

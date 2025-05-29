@@ -55,25 +55,25 @@ public class Trail19Message
    * in hash maps.  This key must implement hashCode() and equals()
    * according to the coalescing semanatics.
    */
-    @Override
-    public Object getCoalesceKey()
-    {
-      // TODO if the message can coalesce, return a unique key to coalesce the message
-      return this;
-    }
+  @Override
+  public Object getCoalesceKey()
+  {
+    // TODO if the message can coalesce, return a unique key to coalesce the message
+    return this;
+  }
 
-    /**
-     * Coalesce this instance with the specified object and return
-     * the result (typically this or c).  If using a CoalesceQueue,
-     * this object is always the first enqueued object and c is the
-     * new object being enqueued.
-     *
-     * @param c
-     */
-    @Override
-    public ICoalesceable coalesce(ICoalesceable c)
-    {
-      // TODO if the message can coalesce, determine the final coalesced message
-      return c;
-    }
+  /**
+   * Coalesce this instance with the specified object and return
+   * the result (typically this or c).  If using a CoalesceQueue,
+   * this object is always the first enqueued object and c is the
+   * new object being enqueued.
+   *
+   * @param newElement
+   */
+  @Override
+  public ICoalesceable coalesce(ICoalesceable newElement)
+  {
+    // TODO if the message can coalesce, determine the final coalesced message
+    return newElement;
+  }
 }

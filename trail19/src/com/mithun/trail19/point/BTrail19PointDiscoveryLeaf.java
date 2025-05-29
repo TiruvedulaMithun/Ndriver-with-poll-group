@@ -27,7 +27,6 @@ import javax.baja.status.BStatusString;
 import javax.baja.status.BStatusValue;
 import javax.baja.sys.*;
 
-
 /**
  * BTrail19PointDiscoveryLeaf is container class for point elements to display in
  * point discovery pane and pass to new point callback.
@@ -112,6 +111,7 @@ public class BTrail19PointDiscoveryLeaf
 
 //@formatter:on
 //endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
+
   public BTrail19PointDiscoveryLeaf()
   {
   }

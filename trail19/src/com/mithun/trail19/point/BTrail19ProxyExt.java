@@ -52,6 +52,7 @@ public class BTrail19ProxyExt
 
 //@formatter:on
 //endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
+
 ////////////////////////////////////////////////////////////////
 // Access
 ////////////////////////////////////////////////////////////////
@@ -69,7 +70,7 @@ public class BTrail19ProxyExt
    */
   public final BTrail19Device getBTrail19Device()
   {
-    return (BTrail19Device) ((BComplex) this).getAncestor(BTrail19Device.TYPE);
+    return (BTrail19Device) getAncestor(BTrail19Device.TYPE);
   }
 
   /**
@@ -101,8 +102,7 @@ public class BTrail19ProxyExt
     return null;
   }
 
-
-
+  @Override
   public boolean write(Context cx)
     throws Exception
   {
@@ -134,25 +134,5 @@ public class BTrail19ProxyExt
   {
     // TODO determine the read/write mode based on the point.
     return BReadWriteMode.readonly;
-  }
-
-  public boolean isBoolean()
-  {
-    return getParentPoint().getOutStatusValue() instanceof BStatusBoolean;
-  }
-
-  public boolean isNumeric()
-  {
-    return getParentPoint().getOutStatusValue() instanceof BStatusNumeric;
-  }
-
-  public boolean isString()
-  {
-    return getParentPoint().getOutStatusValue() instanceof BStatusString;
-  }
-
-  public boolean isEnum()
-  {
-    return getParentPoint().getOutStatusValue() instanceof BStatusEnum;
   }
 }

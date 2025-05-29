@@ -162,6 +162,7 @@ public class BTrail19Network
 
 //@formatter:on
 //endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
+
   @Override
   public void started()
     throws Exception
@@ -225,8 +226,9 @@ public class BTrail19Network
       getSerialConfig().statusUpdate();
     }
   }
+
 ////////////////////////////////////////////////////////////////
-//Security Dashboard
+// Security Dashboard
 ////////////////////////////////////////////////////////////////
 
   /**
@@ -272,14 +274,14 @@ public class BTrail19Network
     List<SecurityDashboardItem> items = new ArrayList<>();
     // TODO - add device level security items to the dashboard
     // Info item to show non critical security status
-    /** items.add(SecurityDashboardItem.makeInfo(
+    /* items.add(SecurityDashboardItem.makeInfo(
      TYPE,
      "BTrail19Network.securityDashboard.info",
      "BTrail19Network.securityDashboard.info.description"
-     )); **/
+     )); */
 
     // Warning item to show critical security status
-    /**
+    /*
      if ("Warrants a Warning".equals(deviceState))
      {
      items.add(SecurityDashboardItem.makeWarning(
@@ -296,10 +298,10 @@ public class BTrail19Network
      "BTrail19Network.securityDashboard.warningType1.description"
      ));
      }
-     **/
+     */
 
     // Alert item to show critical security status
-    /**
+    /*
      if ("Alert condition".equals(deviceState))
      {
      items.add(SecurityDashboardItem.makeAlert(
@@ -316,13 +318,13 @@ public class BTrail19Network
      "BTrail19Network.securityDashboard.alertType1.description"
      ));
      }
-     **/
+     */
 
     return items;
   }
 
 ////////////////////////////////////////////////////////////////
-//Utilities
+// Utilities
 ////////////////////////////////////////////////////////////////
 
   /**

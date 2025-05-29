@@ -68,6 +68,7 @@ public class BTrail19LearnDevicesJob
 
 //@formatter:on
 //endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
+
   /**
    * Constructor - BTrail19LearnDevicesJob
    */
@@ -140,7 +141,6 @@ public class BTrail19LearnDevicesJob
     {
     }
   }
-
 
   final BTrail19Network network;
 

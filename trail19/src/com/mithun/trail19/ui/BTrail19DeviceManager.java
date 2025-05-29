@@ -5,6 +5,7 @@
 package com.mithun.trail19.ui;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.baja.driver.*;
 import javax.baja.driver.ui.device.DeviceExtsColumn;
@@ -48,6 +49,7 @@ public class BTrail19DeviceManager
 
 //@formatter:on
 //endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
+
 ////////////////////////////////////////////////////////////////
 // Constructor
 ////////////////////////////////////////////////////////////////
@@ -104,17 +106,15 @@ public class BTrail19DeviceManager
     else
     {
       BComponent[] selection = getModel().getTable().getSelectedComponents();
-      ArrayList<BTrail19Device> devicesList = new ArrayList<>();
-      for (int i = 0; i < selection.length; i++)
+      List<BTrail19Device> devicesList = new ArrayList<>();
+      for (BComponent component : selection)
       {
-        if (selection[i].getType().is(BTrail19Device.TYPE))
+        if (component.getType().is(BTrail19Device.TYPE))
         {
-          devicesList.add((BTrail19Device)selection[i]);
+          devicesList.add((BTrail19Device)component);
         }
       }
-      BTrail19Device[]devices = new BTrail19Device[devicesList.size()];
-      devices = devicesList.toArray(devices);
-      return devices;
+      return devicesList.toArray(new BTrail19Device[0]);
     }
   }
 
@@ -264,5 +264,4 @@ public class BTrail19DeviceManager
     colName, colType, colDeviceExts,
     colStatus, colEnabled, colHealth,
   };
-
 }

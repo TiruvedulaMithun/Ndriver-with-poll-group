@@ -10,7 +10,7 @@ BTrail19Network.securityDashboard.warningType1.description=Security dashboard sa
 BTrail19Network.securityDashboard.alertType1.title=Security dashboard sample alert
 BTrail19Network.securityDashboard.alertType1.description=Security dashboard sample alert description
 
-BTrail19Device.securityDashboard.title= {1} Security Dashboard
+BTrail19Device.securityDashboard.title={1} Security Dashboard
 BTrail19Device.securityDashboard.info=Security dashboard info
 BTrail19Device.securityDashboard.info.description=Security dashboard description
 BTrail19Device.securityDashboard.warningType1.title=Security dashboard sample warning
