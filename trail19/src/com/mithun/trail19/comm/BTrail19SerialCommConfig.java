@@ -50,14 +50,6 @@ public class BTrail19SerialCommConfig
 //  public int getMaxOutstandingTransactions() { return 1; }
 
   /**
-   * Property to define if messages should be grouped.
-   */
-  public boolean getShouldGroupMessages()
-  {
-    return true;
-  }
-
-  /**
    * Provide custom LinkMessage factory.
    */
   protected NLinkMessageFactory makeLinkMessageFactory()

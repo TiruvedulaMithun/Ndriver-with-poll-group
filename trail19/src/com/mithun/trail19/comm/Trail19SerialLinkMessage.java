@@ -66,7 +66,7 @@ public class Trail19SerialLinkMessage
    *
    * @return the key used for identifying coalescable requests
    *
-   * @see \#coalesce(ICoalesceable)
+   * @see ICoalesceable#coalesce(ICoalesceable)
    * @since Niagara 5.0
    */
   @Override
@@ -80,7 +80,7 @@ public class Trail19SerialLinkMessage
    * Attempts to coalesce this object with the newly enqueued {@code newElement}.
    * <p>
    * This method is called when two queue elements have matching coalescing keys
-   * (as returned by {@link \#getCoalesceKey()}) and are eligible to be merged.
+   * (as returned by {@link #getCoalesceKey()}) and are eligible to be merged.
    * Typically, either {@code this} (the older object) or {@code newElement} (the newer object)
    * is returned based on your desired overwrite or merge strategy.
    * <p>
@@ -92,13 +92,13 @@ public class Trail19SerialLinkMessage
    * @param newElement the newly added queue element with the same coalescing key
    * @return the result of the coalescing operation (typically {@code this} or {@code newElement})
    *
-   * @see \#getCoalesceKey()
+   * @see #getCoalesceKey()
    * @since Niagara 5.0
    */
   @Override
-  public ICoalesceable coalesce(ICoalesceable c)
+  public ICoalesceable coalesce(ICoalesceable newElement)
   {
     // TODO if the message can coalesce, determine the final coalesced message
-    return c;
+    return newElement;
   }
 }

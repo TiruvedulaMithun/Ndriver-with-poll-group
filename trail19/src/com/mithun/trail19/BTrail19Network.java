@@ -200,6 +200,14 @@ public class BTrail19Network
     return BTrail19Device.TYPE;
   }
 
+  /**
+   * return boolean if poll messages should be grouped
+   */
+  public boolean getShouldGroupPoll()
+  {
+    return true;
+  }
+
   /* TODO - Add license check if needed
   @Override
   public final Feature getLicenseFeature()
